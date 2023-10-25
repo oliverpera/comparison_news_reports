@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-with open('Ideen.txt', 'r') as file:
-    for line in file:
+with open('website_urls.txt', 'r') as source_file:
+    for line in source_file:
 
         url = line
 
@@ -30,11 +30,9 @@ with open('Ideen.txt', 'r') as file:
             website_text = website_text.replace('\b', '\n')
             website_text = website_text + '\n' + 'EndOffDocument' + '\n'
 
-            with open("Text.txt", "a", encoding='utf-8') as textdatei:
+            with open("article_text.txt", "a", encoding='utf-8') as textdatei:
 
                 textdatei.write(website_text)
-
-        
 
 
         else:
