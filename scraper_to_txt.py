@@ -36,6 +36,6 @@ with open('website_urls.txt', 'r') as source_file:
 
 
         else:
-            print(f"Fehler beim Abrufen der Website. Statuscode: {response.status_code}")
+            print(f"Fehler beim Abrufen der Website{line}. Statuscode: {response.status_code}")
 
 
