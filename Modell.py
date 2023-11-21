@@ -3,8 +3,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob_de import TextBlobDE
 
 
-
-
 input_file_name = "article_text.txt"
 
 input_file_name2 = "second_text.txt"
@@ -40,16 +38,8 @@ def find_diffrent_words(word_list,word_list2):
     return liste
    
 
-print(find_diffrent_words(word_list,word_list2))
+#print(find_diffrent_words(word_list,word_list2))
 
 
-
-
-
-
-
-
-
-
-
-
+analyse = TextBlobDE(full_text)
+print(analyse.sentiment)
